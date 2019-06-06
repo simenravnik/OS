@@ -2,7 +2,7 @@
 # Skripta pri predmetu OS
 
 ```
-Avtor: Simen Ravnik
+Avtor: Šimen Ravnik
 Datum: June 2019
 ```
 
@@ -32,7 +32,12 @@ Kriteriji: medsebojno izključevanje v vsakih okoliščinah, ne sme priti do 
 
 6. ***Razloži razvrščanje – prekinitveno in neprekinitveno!***
 
-> Ločimo tri vrste razvrščanja – na procesorju (kratkoročno – teče, pripravljen), razvrščanje poslov (dolgoročno - nov) in menjavanje (srednjeročno - pripravljen). Razvrščanje opravlja razvrščevalnik, ki je del OS.
+> Ločimo tri vrste razvrščanja:
+> * na procesorju (kratkoročno – teče, pripravljen),
+> * razvrščanje poslov (dolgoročno - nov) in
+> * menjavanje (srednjeročno - pripravljen).
+
+> Razvrščanje opravlja razvrščevalnik, ki je del OS.
 Na enoprocesorskem sistemu v nekem trenutku teče kvečjemu en proces. Ostali procesi bodisi čakajo (na nek dogodek) ali pa so pripravljeni (čakajo na CPE). Med pripravljenimi se slednjič enega izbere in sedaj se njemu dodeli CPE, temu se reče preklop. Pravimo, da je procesor zamenjal okolje svojega delovanja. Tak preklop imenujemo tudi menjava okolja (context switch). Pri menjavi okolja (preklopu) sta v resnici udeležena dva programa OS:
 razvrščevalnik (scheduler), ki izbere enega od pripravljenih procesov,
 dodeljevalnik (dispatcher), ki izbranemu procesu v resnici dodeli procesor, tj. izvede menjavo okolja.

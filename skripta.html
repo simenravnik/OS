@@ -303,7 +303,15 @@ Kriteriji: medsebojno izkljuc&#x30C;evanje v vsakih okolis&#x30C;c&#x30C;inah, n
 <li><em><strong>Razloz&#x30C;i razvrs&#x30C;c&#x30C;anje &#x2013; prekinitveno in neprekinitveno!</strong></em></li>
 </ol>
 <blockquote>
-<p>Loc&#x30C;imo tri vrste razvrs&#x30C;c&#x30C;anja &#x2013; na procesorju (kratkoroc&#x30C;no &#x2013; tec&#x30C;e, pripravljen), razvrs&#x30C;c&#x30C;anje poslov (dolgoroc&#x30C;no - nov) in menjavanje (srednjeroc&#x30C;no - pripravljen). Razvrs&#x30C;c&#x30C;anje opravlja razvrs&#x30C;c&#x30C;evalnik, ki je del OS.<br>
+<p>Loc&#x30C;imo tri vrste razvrs&#x30C;c&#x30C;anja:</p>
+<ul>
+<li>na procesorju (kratkoroc&#x30C;no &#x2013; tec&#x30C;e, pripravljen),</li>
+<li>razvrs&#x30C;c&#x30C;anje poslov (dolgoroc&#x30C;no - nov) in</li>
+<li>menjavanje (srednjeroc&#x30C;no - pripravljen).</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Razvrs&#x30C;c&#x30C;anje opravlja razvrs&#x30C;c&#x30C;evalnik, ki je del OS.<br>
 Na enoprocesorskem sistemu v nekem trenutku tec&#x30C;e kvec&#x30C;jemu en proces. Ostali procesi bodisi c&#x30C;akajo (na nek dogodek) ali pa so pripravljeni (c&#x30C;akajo na CPE). Med pripravljenimi se slednjic&#x30C; enega izbere in sedaj se njemu dodeli CPE, temu se rec&#x30C;e preklop. Pravimo, da je procesor zamenjal okolje svojega delovanja. Tak preklop imenujemo tudi menjava okolja (context switch). Pri menjavi okolja (preklopu) sta v resnici udelez&#x30C;ena dva programa OS:<br>
 razvrs&#x30C;c&#x30C;evalnik (scheduler), ki izbere enega od pripravljenih procesov,<br>
 dodeljevalnik (dispatcher), ki izbranemu procesu v resnici dodeli procesor, tj. izvede menjavo okolja.<br>
@@ -445,39 +453,70 @@ Razlike: komunikacija med istorodnimi nitmi je hitrejs&#x30C;a kot med procesi, 
 <p>Je del OS, ki skrbi za komunikacijo in sinhronizacijo med procesi.</p>
 </blockquote>
 <ol start="26">
-<li><em><strong>Kako deluje razvrscevalni algoritem SJF (Shortest Job First)?</strong></em></li>
+<li><em><strong>Kako deluje razvr&#x161;&#x10D;evalni algoritem SJF (Shortest Job First)?</strong></em></li>
 </ol>
 <blockquote>
 <p>TO DO...</p>
 </blockquote>
 <ol start="27">
-<li><em><strong>Nastejte naloge operacijskega sistema.</strong></em></li>
+<li><em><strong>Na&#x161;tejte naloge operacijskega sistema.</strong></em></li>
 </ol>
 <blockquote>
 <p>TO DO...</p>
 </blockquote>
 <ol start="28">
-<li><em><strong>Nastej tipe datotek v Linuxu?</strong></em></li>
+<li><em><strong>Na&#x161;tejte tipe datotek v Linuxu?</strong></em></li>
 </ol>
 <blockquote>
 <p>TO DO...</p>
 </blockquote>
 <ol start="29">
-<li><em><strong>Poznamo dva modela za medprocesno komunikacijo. Opi&#x2C7;site njune glavne znacilnosti.</strong></em></li>
+<li><em><strong>Poznamo dva modela za medprocesno komunikacijo. Opi&#x161;ite njune glavne zna&#x10D;ilnosti.</strong></em></li>
 </ol>
 <blockquote>
 <p>Socketi in cevi, opisano zgoraj.</p>
 </blockquote>
 <ol start="30">
-<li><em><strong>Odgovori na vprasanja</strong></em></li>
+<li><em><strong>Odgovori na vpra&#x161;anja</strong></em></li>
 </ol>
 <ul>
 <li>V kateri datoteki na Linux sistemih se skriva sol?</li>
-<li>Zapisite ukaz, ki ustvari anonimno cev.</li>
-<li>Katera dva znaka v Bashu sta lahko uporabljena za lo&#x2C7;cilo med ukazi?</li>
-<li>Kam se shranjujejo podatki, ki jih zapisemo v /dev/null</li>
-<li>Kateri proces je tipicno oce vseh demonov?</li>
+<li>Zapi&#x161;ite ukaz, ki ustvari anonimno cev.</li>
+<li>Katera dva znaka v Bashu sta lahko uporabljena za lo&#x10D;ilo med ukazi?</li>
+<li>Kam se shranjujejo podatki, ki jih zapi&#x161;emo v /dev/null</li>
+<li>Kateri proces je tipi&#x10D;no o&#x10D;e vseh demonov?</li>
 </ul>
+<ol start="31">
+<li><em><strong>Na&#x161;tejte prednosti mikrojedernih operacijskih sistemov</strong></em></li>
+</ol>
+<blockquote>
+<p>TO DO...</p>
+</blockquote>
+<ol start="32">
+<li><em><strong>Katere funkcije OS opravlja mikrojedro?</strong></em></li>
+</ol>
+<blockquote>
+<p>TO DO...</p>
+</blockquote>
+<ol start="33">
+<li><em><strong>Katere modele za medprocesno komunikacijo poznate? Opi&#x161;ite njihove prednosti in slabosti.</strong></em></li>
+</ol>
+<blockquote>
+<p>TO DO...<br>
+Zaenkrat: Socketi in cevi, opisano zgoraj.</p>
+</blockquote>
+<ol start="34">
+<li><em><strong>Z diagramom opi&#x161;ite delovanje ukazov wait(S) in signal(S) za delo s semaforji. Ozna&#x10D;ite kateri deli se morajo izvajati atomarno.</strong></em></li>
+</ol>
+<blockquote>
+<p>TO DO...</p>
+</blockquote>
+<ol start="35">
+<li><em>Razlo&#x17E;i pomen pozivnika</em> <em><strong>sokrat@jama:~&gt;</strong></em> . <em>Obrazlo&#x17E;i vse dele, tudi lo&#x10D;ila.</em></li>
+</ol>
+<blockquote>
+<p>TO DO...</p>
+</blockquote>
 
       </div>
       
