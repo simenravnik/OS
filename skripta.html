@@ -264,42 +264,215 @@ pre[data-line] .line-highlight[data-end]:after {
       <div class="mume markdown-preview  ">
       <h1 class="mume-header" id="skripta-pri-predmetu-os">Skripta pri predmetu OS</h1>
 
-<pre data-role="codeBlock" data-info class="language-"><code>Avtor: Simen Ravnik
-Datum: June 2019
+<pre data-role="codeBlock" data-info class="language-"><code>Avtor: &#x160;imen Ravnik
+Datum: June, 2019
 </code></pre><h2 class="mume-header" id="odgovori-na-vprasanja">Odgovori na vprasanja</h2>
 
 <ol>
-<li><em><strong>Razloz&#x30C;i semafor!</strong></em></li>
+<li><em><strong>Kaj je OS?</strong></em></li>
 </ol>
 <blockquote>
-<p>Semafor je orodje za c&#x30C;asovno usklajevanje procesov. Je celos&#x30C;tevilska spremenljivka S, nad katero se izvajajo operacije inicializacija, wait(S) ter signal(S) &#x2013; signal = S+=1, wait pa c&#x30C;aka dokler je S&lt;=0, nato S-=1. Ponavadi sta ti dve operaciji realizirani na OS.</p>
+<p>OS je program, ki deluje kot posrednik med uporabnikom in strojno opremo. Pri tem skus&#x30C;a:</p>
+<ul>
+<li>zagotoviti uc&#x30C;inkovitost uporabe strojne opreme</li>
+<li>ustvariti prijazno okolje</li>
+</ul>
 </blockquote>
 <ol start="2">
+<li><em><strong>Kaj sestavlja rac&#x30C;unalnis&#x30C;ki sistem?</strong></em></li>
+</ol>
+<blockquote>
+<ul>
+<li>uporabniki</li>
+<li>uporabnis&#x30C;ki programi</li>
+<li>strojna oprema</li>
+<li>operacijski sistem</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li><em><strong>Lastnosti/naloge OS</strong></em></li>
+</ol>
+<blockquote>
+<ul>
+<li>dodeljuje vire programom skladno s potrebami in zmoz&#x30C;nostmi</li>
+<li>res&#x30C;uje konfliktne situacije</li>
+<li>optimizira uporabo rac&#x30C;unalnis&#x30C;kih virov</li>
+<li>nadzira delo nekaterih virov</li>
+<li>nadzira izvajanje upor. programov</li>
+<li>olajs&#x30C;uje delo uporabniku</li>
+<li>povec&#x30C;uje uc&#x30C;inkovitost rac&#x30C;unalnis&#x30C;kega sistema</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li><em><strong>Rezidentni monitor</strong></em></li>
+</ol>
+<blockquote>
+<p>Uporablja se za avtomatizacijo delovanja poslov. Ob koncu vsakega posla klic&#x30C;e naslednjega. Ob zagonu se sam naloz&#x30C;i v pomnilnik ter ostane tam celi c&#x30C;as. Za delovanje potrebuje kontrolne kartice, zato tudi interpreter kartic, nalagalnik ter gonilnike za V/I naprave.</p>
+</blockquote>
+<ol start="5">
+<li><em><strong>Prekrivanje operacij</strong></em></li>
+</ol>
+<blockquote>
+<p>Realizirano je bili z loc&#x30C;enim V/I ali pa preko spoolinga. Loc&#x30C;eni V/I se je pojavil, ko se je pojavil magnetni trak, saj je trak bil vmesni c&#x30C;len men V/I in CPU. Tako so lahko hkrati potekalo V/I in rac&#x30C;unske operacije. Problem je bil, ker je trak imel zaporedni dostop. Spooling se je pojavil z diskom, saj imajo ti neposredni dostop, zato se uporabljajo kot vmensi mediji za zac&#x30C;asno hranjenje V/I podatkov. Spooling uporablja branje vnaprej in tako omogoc&#x30C;i, da je na disko lahko hkrati pripravljenih vec&#x30C; poslov.</p>
+</blockquote>
+<ol start="6">
 <li><em><strong>Razloz&#x30C;i spooling!</strong></em></li>
 </ol>
 <blockquote>
 <p>Spooling je branje vnaprej &#x2013; s tem omogoc&#x30C;i, da je na disku vec&#x30C; pripravljenih poslov hkrati. Omogoc&#x30C;a, da se disk lahko uporabi kot velik vmesnik za zac&#x30C;asno hranjenje vhodno/izhodnih podatkov. Omogoc&#x30C;a prekrivanje V/I operacij ter rac&#x30C;unskih operacij.</p>
 </blockquote>
-<ol start="3">
-<li><em><strong>Razloz&#x30C;i kritic&#x30C;ne odseke / sekcije / dele ! Katere kriterije bi morali upos&#x30C;tevati za splos&#x30C;no res&#x30C;itev problema kritic&#x30C;nega dela?</strong></em></li>
+<ol start="7">
+<li><em><strong>Multiprogramska paketna obdelava</strong></em></li>
 </ol>
 <blockquote>
-<p>Kritic&#x30C;ni odsek je del programa oz. procesa, ki dostopa do skupnega sredstva. Bistveni pogoj za res&#x30C;itev tega problema je da je v kritic&#x30C;nem odseku v vsakem trenutku le en proces.<br>
-Kriteriji: medsebojno izkljuc&#x30C;evanje v vsakih okolis&#x30C;c&#x30C;inah, ne sme priti do zastoja, ne sme priti do nepredvideno dolgega odlaganja, izvajanje enega procesa znotraj kritic&#x30C;nega dela ne sme ovirati napredovanja drugih procesov izven kritic&#x30C;nega dela.</p>
+<p>Smisel je, da ko se posel ustavi, OS izbere novega. S tem se pojavijo zahteve po razvrs&#x30C;c&#x30C;anju poslov, po upravljanju s pomnilnikom, po dodeljevanju procesorja (razvrs&#x30C;c&#x30C;anju na procesorju) ter zas&#x30C;c&#x30C;iti.</p>
 </blockquote>
-<ol start="4">
-<li><em><strong>Nas&#x30C;tej razlike med vtic&#x30C;nicami in cevmi!</strong></em></li>
+<ol start="8">
+<li><em><strong>C&#x30C;asovno dodeljevanje &#x2013; vec&#x30C;opravilni OS</strong></em></li>
 </ol>
 <blockquote>
-<p>Cevi so enosmerni kanali &#x2013; za komunikacijo sta potrebni dve, na vtic&#x30C;nice pa se priklopijo dvosmerni kanali. Cevi (razen FIFO, t.j. poimenovane cevi) lahko obstajajo le med dvema procesoma v sorodstvu (otrok-otrok, roditelj-otrok), za vtic&#x30C;nice pa ta relacija ni potrebna.</p>
+<p>Multiprogramski sistem paketne obdelave, ki uporablja s&#x30C;e timer. Hkrati lahko dela vec&#x30C; uporabnikov, vsak s svojim poslom, toda vsak posel se sme neprekinjeno izvajati omejen c&#x30C;as. OS izbere posel, mu dodeli c&#x30C;as za izvajanje in ga poz&#x30C;ene, c&#x30C;e mine dodeljeni c&#x30C;as, ali pa se posel ustavi (konc&#x30C;al, c&#x30C;aka na c&#x30C;loveka) prevzame nadzor OS, ki izbere drug posel, mu dodeli c&#x30C;as, in ga poz&#x30C;ene. Pri tem se pojavijo zahteve po upravljanju z zunanjim pomnilnikom, navideznim pomnilnikom, zahteve po datotec&#x30C;nem sistemu, po zas&#x30C;c&#x30C;iti, po dodeljevanju procesorja ter po sinhronizaciji in komunikaciji.</p>
 </blockquote>
-<ol start="5">
-<li><em><strong>Socketi</strong></em></li>
+<ol start="9">
+<li><em><strong>Krmilnik</strong></em></li>
 </ol>
 <blockquote>
-<p>Vtic&#x30C;nice so enostaven programski vmesnik za komunikacijo med procesi na istem ali razlic&#x30C;nih rac&#x30C;unalnikih. Pred pric&#x30C;etkom komunikacije morata oba procesa P in Q ustvariti vsaj svojo vric&#x30C;nico. Nato pove vsak svoji vtic&#x30C;nici kaks&#x30C;en naslov bo imela (v mrez&#x30C;i je to IP). Sedaj se lahko pogovarjata &#x2013; strez&#x30C;nik (listen, accept), odjemalec (connect), za oba (send, recv, read, write, close).</p>
+<p>Nadzoruje ustrezno napravo ali vec&#x30C; naprav.</p>
 </blockquote>
-<ol start="6">
+<ol start="10">
+<li><em><strong>Bootstrap</strong></em></li>
+</ol>
+<blockquote>
+<p>Majhen, enostaven program, ki inicializira rac&#x30C;unalnis&#x30C;ki sistem (registre CPE, pomnilnike, krmilnike...), naloz&#x30C;i jedro OS v pomnilnik in mu nato preda nadzor.</p>
+</blockquote>
+<ol start="11">
+<li><em><strong>Vrste prekinitev</strong></em></li>
+</ol>
+<blockquote>
+<ul>
+<li><strong>Strojna</strong>, sproz&#x30C;i strojna oprema: Npr. naprava pos&#x30C;lje po vodilu prekinitveno zahtevo in z njo prekine tekoc&#x30C;e delo na CPE, konec V/I operacije, neveljaven poseg v pomnilnik.</li>
+<li><strong>Programska</strong>, c&#x30C;e jo sproz&#x30C;i tekoc&#x30C;i program: Npr. sistemski klic, s katerim tekoc&#x30C;i program zahteva pomoc&#x30C; OS, past (trap), ker je CPE zaznala izjemno situacijo (deljenje z 0).</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Ko se pojavi prekinitvena zahteva:</strong><br>
+CPE prekine tekoc&#x30C;e delo, izvede prekinitveno servisni program (v nadaljevanju PSP), s katerim se odzove na dogodek, nato nadaljuje prekinjeno delo.</p>
+</blockquote>
+<ol start="12">
+<li><em><strong>Polling &#x2013; programsko izpras&#x30C;evanje</strong></em></li>
+</ol>
+<blockquote>
+<p>Ko se pojavi prekinitev, CPE prekine delo, zaz&#x30C;ene PSP ki ugotovi kdo je zahteval prekinitev, zaz&#x30C;ene ustrezni PSP in nato nadaljuje z delom.</p>
+</blockquote>
+<ol start="13">
+<li><em><strong>Vektorsko prekinjanje</strong></em></li>
+</ol>
+<blockquote>
+<p>Ko naprava zahteva prekinitev, v CPE pos&#x30C;lje tudi indeks i, s pomoc&#x30C;jo katerega nato CPE v prekinitvenem vektorju (tabeli v pomnilniku) pois&#x30C;c&#x30C;e ustrezen PSP ter ga zaz&#x30C;ene.</p>
+</blockquote>
+<ol start="14">
+<li><em><strong>Vhodno izhodni sistem</strong></em></li>
+</ol>
+<blockquote>
+<p>Sestavljen je iz V/I naprav, krmilnikov ter programov za V/I operacije. Krmilnik skrbi za podrobnosti pri prenosu podatkov &#x2013; na njih se izvajajo V/I programi.</p>
+</blockquote>
+<ol start="15">
+<li><em><strong>Sinhroni V/I</strong></em></li>
+</ol>
+<blockquote>
+<p>Proces, ki je zahteval V/I operacijo, c&#x30C;aka da se ta konc&#x30C;a. Lahko izvede kako zanko, ukaz wait ali pa sam spremlja statusni register.</p>
+</blockquote>
+<ol start="16">
+<li><em><strong>Asinhroni V/I</strong></em></li>
+</ol>
+<blockquote>
+<p>Proces, ki je zahteval V/I operacijo, nadaljuje svoje izvajanje. C&#x30C;e ne more nadaljevati dela, ker c&#x30C;aka na podatke, sam sebe blokira. Je primeren za poc&#x30C;asne naprave.</p>
+</blockquote>
+<ol start="17">
+<li><em><strong>DMA krnilnik</strong></em></li>
+</ol>
+<blockquote>
+<p>Se uporablja pri hitrih napravah za prenos med pomnilnikom in V/I napravami, brez posredovanja CPU. CPU pos&#x30C;lje ukaz in podatke gonilniku, gonilnik podatke zapis&#x30C;e v registre DMA krmilnika in se blokira. Ko DMA konc&#x30C;a prenos pos&#x30C;lje prekinitveno zahtevo CPE.</p>
+</blockquote>
+<ol start="18">
+<li><em><strong>Kje se uporablja tabela stanj naprav?</strong></em></li>
+</ol>
+<blockquote>
+<p>Uporablja se pri asinhronem V/I, kjer omogoc&#x30C;a vec&#x30C; vzporednih V/I operacij. Tabela vsebuje osnovne podatke o napravi in kazalec na tabelo V/I zahtev, kamor se vpisujejo vse zahteve za to napravo.</p>
+</blockquote>
+<ol start="19">
+<li><em><strong>Elementi strojne zas&#x30C;c&#x30C;ite</strong></em></li>
+</ol>
+<blockquote>
+<p>Sistemski nac&#x30C;in delovanja in uporabnis&#x30C;ki nac&#x30C;in delovanja</p>
+<ul>
+<li><strong>V/I naprave</strong>: V/I ukaze sme izvajati le OS, saj le ta pozna stanje V/I naprav (npr. preko tabele stanj naprav) V/I ukazi morajo zato biti priviligirani.</li>
+<li><strong>Gl. pomnilnik</strong>: Nastavimo spodnjo in zgornjo mejo trenutno dovoljenih naslovov. Pred dostopom do pom nilnika se vsak naslov strojno preveri. C&#x30C;e je izven dovoljenega obsega, se program ujame v past (in nadzor prevzame OS).</li>
+<li><strong>CPE</strong>: CPE je treba zas&#x30C;c&#x30C;ititi pred tem , da bi si jo upor.program prilastil &#x2013;uvedemo timer.</li>
+</ul>
+</blockquote>
+<ol start="20">
+<li><em><strong>Komponente OS</strong></em></li>
+</ol>
+<blockquote>
+<ul>
+<li><strong>Upravljanje procesov</strong> - Ustvarjanje, unic&#x30C;enje, odloz&#x30C;itev procesa, njegovo ponovno obuditev, usklajevanje med procesi, komunikacija med procesi , res&#x30C;evanje iz zastojev (mrtvih zank) , in s&#x30C;e kaj.</li>
+<li><strong>Upravljanje glavnega pomnilnika</strong> - Nadzor &#x2013; dodeljevanje in odvzemanje</li>
+<li><strong>Upravljanje datotek</strong> - Ustvarjanje in brisanje, premes&#x30C;c&#x30C;anje, kopiranje, stik, sprehajanje po dir., preslikavanje m ed datoteko in resnic&#x30C;nim zunanjim pomnilnikom, skladis&#x30C;c&#x30C;enje (backup), t.j. varnostno shranjevanje.</li>
+<li><strong>Upravljanje V/I sistema</strong> - Vsplos&#x30C;en vmesnik za kom unikacijo z golilniki, vsebovati gonilnike za posamezne V/I naprave, upravljati z vmesnimi pomnilniki (buffer), predpomnilniki (cache), spoolingom in s&#x30C;e kaj.</li>
+<li><strong>Zas&#x30C;c&#x30C;ita in varnost</strong> - Nadzorovanje dostopa procesov do posameznih virov in zas&#x30C;c&#x30C;ita pred okolico.</li>
+<li><strong>Delo v omrez&#x30C;ju</strong></li>
+<li><strong>Interpretacija uporabnikovih ukazov</strong></li>
+</ul>
+</blockquote>
+<ol start="21">
+<li><em><strong>Sistemski klic</strong></em></li>
+</ol>
+<blockquote>
+<p>Z njegovo pomoc&#x30C;jo programer zaprosi OS, da ta v njegovem imenu izvede neko (zanj prepovedano) priviligirano akcijo. Nekateri vis&#x30C;ji programski jeziki pa te klice (read, load, store, create, open, execute ...) vseeno omogoc&#x30C;ajo.<br>
+V grobem jih razbrstimo v skupine : upravljanje procesov, upravljanje datotek, upravljanje naprav, vzdrz&#x30C;evanje in dostavo informacij, komunikacijo</p>
+</blockquote>
+<ol start="22">
+<li><em><strong>Zgradbe jedra?</strong></em></li>
+</ol>
+<blockquote>
+<ul>
+<li><strong>Enostavna</strong> &#x2013; monolitna - Jedro je veliko, opravlja veliko funkcij in je &apos;neurejeno&apos;. ranljivost, nezanesljivost, tez&#x30C;avna razs&#x30C;irjenost. MSDOS, zac&#x30C;etni UN IX</li>
+<li><strong>Razslojena</strong> - spodnji sloj je strojna oprem a, vsak vis&#x30C;ji sloj pa temelji le na niz&#x30C;jih slojih.<br>
+Skrivanje podrobnosti, prinas&#x30C;a red., manjs&#x30C;a uc&#x30C;inkovitost zaradi rez&#x30C;ije pri prenas&#x30C;anju. THE (6 slojev), Venus (7)</li>
+<li><strong>Mikrojedro</strong> - ohrani le bistvene komponente. Jedro je majhno, razs&#x30C;irljivo, obvladljivo, prenosljivo. Celoten<br>
+sistem pa enostavno razs&#x30C;irljiv, zanesljiv, varen. Npr. c&#x30C;e eden od servisov &apos;izpade&apos;, to ne prizadene celotnega sistema. UNIX, Apple MacOS, Windows NT.</li>
+</ul>
+</blockquote>
+<ol start="23">
+<li><em><strong>Kaj je proces?</strong></em></li>
+</ol>
+<blockquote>
+<p>Proces je program v izvajanju. Je ustvarjen, tec&#x30C;e in nato unic&#x30C;en. Za svoje delovanje potrebuje vire (CPE, pomnilnik, V/I, datoteke, c&#x30C;as, ...). Nekatere vire dobi ob nastanku, druge kasneje. Z okolico si lahko izmenjuje podatke. Hkrati lahko obstaja vec&#x30C; procesov. Lahko so neodvisni, lahko pa se usklajujejo, komunicirajo. Obic&#x30C;ajno tekmujejo za omejene vire. Proces sam lahko ustvari nove procese. Program je pasivna entiteta - vsebina neke datoteke. Proces poleg program a zajem a tudi trenutno stanje nekaterih drugih entitet, ki se spreminjajo med izvajanjem programa.</p>
+</blockquote>
+<ol start="24">
+<li><em><strong>Nas&#x30C;tej stanja procesa v CPU!</strong></em></li>
+</ol>
+<blockquote>
+<p>Stanja procesa so: ustvarjen (nov), pripravljen(c&#x30C;aka, da se mu dodeli procesna enota), tec&#x30C;e (se izvaja), c&#x30C;aka (ustavljen), konc&#x30C;an.</p>
+</blockquote>
+<ol start="25">
+<li><em><strong>Kaj je PCB?</strong></em></li>
+</ol>
+<blockquote>
+<p>PCB je nadzorni blok procesa v OS-u. Vsebuje podatke o procesu, med njimi tudi kazalce za povezovanje z drugimi PCB v razne vrste. (stanje, prioriteta, podatki za obnovo, sklad, spremenljivke, podatki o pomnilniku, V/I in datoteke, ostalo).</p>
+</blockquote>
+<ol start="26">
+<li><em><strong>V katerih vrstah se nahajajo procesi?</strong></em></li>
+</ol>
+<blockquote>
+<ul>
+<li>vrsta vseh procesov</li>
+<li>vrsta pripravljenih procesov</li>
+<li>vrsta procesov, ki c&#x30C;akajo na V/I napravo</li>
+</ul>
+</blockquote>
+<ol start="27">
 <li><em><strong>Razloz&#x30C;i razvrs&#x30C;c&#x30C;anje &#x2013; prekinitveno in neprekinitveno!</strong></em></li>
 </ol>
 <blockquote>
@@ -342,143 +515,201 @@ Zato to imenujemo razvrs&#x30C;c&#x30C;anje brez prekinjanja (nonpreemtive sch.)
 Torej je lahko res prekinjen. To je razvrs&#x30C;c&#x30C;anje s prekinjanjem (preemptive sch.)</li>
 </ul>
 </blockquote>
-<ol start="7">
-<li><em><strong>Nas&#x30C;tej stanja procesa v CPU!</strong></em></li>
+<ol start="28">
+<li><em><strong>Algoritmi za razvrs&#x30C;c&#x30C;anje</strong></em></li>
 </ol>
 <blockquote>
-<p>Stanja procesa so: ustvarjen (nov), pripravljen(c&#x30C;aka, da se mu dodeli procesna enota), tec&#x30C;e (se izvaja), c&#x30C;aka (ustavljen), konc&#x30C;an.</p>
+<ul>
+<li><strong>Prvi pride, prvi melje (FIFO)</strong> &#x2013; proces, ki je prej zahteval procesor ga prvi dobi</li>
+<li><strong>Kroz&#x30C;no razvrs&#x30C;c&#x30C;anje (round robin)</strong> &#x2013; vrsta pripravljenih procesov je kroz&#x30C;ni seznam in proces, ki pride na vrsto dobi<br>
+nek c&#x30C;asovno rezino. Ko ta potec&#x30C;e ali pa se proces ustavi, se proces postavi na konec vrste</li>
+<li><strong>Razvrs&#x30C;c&#x30C;anje po prioriteti</strong> &#x2013; vsak proces ima prioriteto, najvis&#x30C;ji dobi CPE</li>
+<li><strong>Najkrajs&#x30C;i nemoteni c&#x30C;as (SJF - Shortest Job First)</strong> &#x2013; CPE se dodeli procesu, ki bo najmanj c&#x30C;asa nemoteno tekel.<br>
+Napovedujemo tako, da predpostavimo, da bo naslednji nemoteni tek trajal podobno c&#x30C;asa, kot trenutni</li>
+<li><strong>Najkrajs&#x30C;i nemoteni tek + prekinjanje (SRTF - Shortest Remaining Time First)</strong> - enak SJF, le da se lahko tekoc&#x30C;i proces<br>
+prekine, c&#x30C;e drug pripravljen proces obljublja krajs&#x30C;i nemoten tek od preostanka tekoc&#x30C;ega nemotenega teka</li>
+<li><strong>Z zagotovilom</strong> - s pomoc&#x30C;jo formule izrac&#x30C;una kvocient k in proces, ki ima najmanjs&#x30C;i k dobi CPE. C&#x30C;e vpeljemo s&#x30C;e<br>
+prekinjanje, se k tekom c&#x30C;asa povec&#x30C;uje, in ko presega vrednost naslednjega najmanjs&#x30C;eg k-ja, se prekine</li>
+<li><strong>Loterija</strong> &#x2013; Razvrs&#x30C;c&#x30C;evalnik nakljuc&#x30C;no izbere dovolilnico.</li>
+</ul>
 </blockquote>
-<ol start="8">
-<li><em><strong>Pojasni signale v UNIXu! Imenuj razlog, zakaj so signali lahko nezanesljivi.</strong></em></li>
+<ol start="29">
+<li><em><strong>Na osnovi c&#x30C;esa naj vrednotimo in primerjamo algoritme za razvrs&#x30C;c&#x30C;anje?</strong></em></li>
+</ol>
+<blockquote>
+<ul>
+<li><strong>Izkoris&#x30C;c&#x30C;enost CPE (CPU utilization)</strong>... CPE naj bo c&#x30C;im bolj izkoris&#x30C;c&#x30C;en. V realnosti 40% - 90%</li>
+<li><strong>Propustnost (troughput)</strong>... s&#x30C;tevilo konc&#x30C;anih procesov v nekem c&#x30C;asu</li>
+<li><strong>C&#x30C;as obdelave (turnaround time)</strong>... c&#x30C;as od nastanka procesa do njegovega konca</li>
+<li><strong>C&#x30C;akalni c&#x30C;as (waiting time)</strong>...</li>
+<li><strong>Odzivni c&#x30C;as (response time)</strong>... c&#x30C;as od nastanka procesa do prve izhodne operacije.</li>
+<li><strong>Pravic&#x30C;nost (fairness)</strong>... vsak proces naj dobi ustrezen c&#x30C;as CPE</li>
+</ul>
+</blockquote>
+<ol start="30">
+<li><em><strong>Kaj pa vpliva na preklopni c&#x30C;as?</strong></em></li>
+</ol>
+<blockquote>
+<ul>
+<li>Hitrost pomnilnika (kjer je shranjen PCB)</li>
+<li>S&#x30C;tevilo registov procesorja (ki se morajo shraniti v PCB oz. obnoviti iz njega)</li>
+<li>(ne)obstoj ukazov za shranitev/obnovo vseh registrov naenkrat</li>
+<li>Zgradba procesorja</li>
+<li>Zapletenost komponent OS</li>
+<li>kaks&#x30C;no je razvrs&#x30C;c&#x30C;anje (tj. po katerem algoritmu deluje)</li>
+<li>ostala morebitna obc&#x30C;asna opravila</li>
+<li>Menjavanje okolja je ozko grlo O S, saj se pri tem lahko izgubi veliko c&#x30C;asa.</li>
+</ul>
+</blockquote>
+<ol start="31">
+<li><em><strong>Nit</strong></em></li>
+</ol>
+<blockquote>
+<p>Je tok izvajanja programa do danega trenutka. C&#x30C;e je sistem enoprocesorski, procesor posveti vsaki niti nekaj c&#x30C;asa, tako da vse napredujejo. C&#x30C;e pa je sistem vec&#x30C;procesorski, pa se lahko vsaka nit izvaja na svojem procesorju (to ni paralelno, ampak soc&#x30C;asno). En proces ima lahko vec&#x30C; niti. Niti uporabljamo z&#x30C;elimo soc&#x30C;asno izvajati vec&#x30C; funkcij istega programa ali pa soc&#x30C;asno izvajati vec&#x30C; klicev iste funkcije.</p>
+</blockquote>
+<ol start="32">
+<li><em><strong>Podobnosti in razlike med nitmi in procesi</strong></em></li>
+</ol>
+<blockquote>
+<ul>
+<li><strong>Podobnosti</strong>: tudi nit je lahko v stanjih (nova, prekinjena, tec&#x30C;e, c&#x30C;aka ,konc&#x30C;ana), tudi nit lahk oustvari nove niti (hc&#x30C;ere) ter jih konc&#x30C;a in unic&#x30C;i, na enoprocesorskem sistemu tudi niti tekmujejo za procesor.</li>
+<li><strong>Razlike</strong>: komunikacija med istorodnimi nitmi je hitrejs&#x30C;a kot med procesi, istorodne niti niso zas&#x30C;c&#x30C;itene ena pred drugo tako kot procesi, ustvarjanje / konc&#x30C;anje niti je hitrejs&#x30C;e kot pri procesih.</li>
+</ul>
+</blockquote>
+<ol start="33">
+<li><em><strong>Vrste komunikacije</strong></em></li>
+</ol>
+<blockquote>
+<ul>
+<li>Za prenos podatkov skrbi <code>OS</code> (tj. njegova komponenta IPC). Ta nac&#x30C;in je poc&#x30C;asnejs&#x30C;i.</li>
+<li>Za prenos podatkov skrbita <code>proizvajalec in porabnik</code> (preko skupnega pomnilnika)</li>
+</ul>
+</blockquote>
+<ol start="34">
+<li><em><strong>IPC</strong></em></li>
+</ol>
+<blockquote>
+<p>Je del OS, ki skrbi za komunikacijo in sinhronizacijo med procesi.</p>
+<ul>
+<li><strong>Neposredna komunikacija</strong>: procesi se pri komuniciranju ekslicitno imenujejo (navedejo).
+<ul>
+<li><em>Simetric&#x30C;na</em>: pos&#x30C;iljatelj in prejemnik drug drugega eksplicitno imenujeta</li>
+<li><em>Asimetric&#x30C;na</em>: samo pos&#x30C;iljatelj eksplicitno navede prejemnika<br>
+send(Q,m) ...pos&#x30C;lji procesu Q sporoc&#x30C;ilo m<br>
+receive (x,m) ...prejmi od kogarkoli sporoc&#x30C;ilo m in potem vrni njegovo ime v spremenljivko v x</li>
+</ul>
+</li>
+<li><strong>Posredna komunikacija</strong>: procesi imenujejo vmesni medij &#x2013; nabiralnik. Nabiralnikov je lahko vec&#x30C;, vsak im a enolic&#x30C;ni naslov. Pos&#x30C;iljatelj sporoc&#x30C;ilo vstavi v nek nabiralnik, od koder ga vzame prejemnik.
+<ul>
+<li><em>Nabiralnik je del procesa P, ki ga je ustvaril.</em> Bere samo P.</li>
+<li><em>Nabiralnik je del OS.</em> Berejo isti katerim P podeli lastnis&#x30C;tvo. Nevarnost! (tekma za sporoc&#x30C;ilo, garbage collection)<br>
+send(N, m) ...vrzi v nabiralnik N sporoc&#x30C;ilo m<br>
+receive (N,m) ...vzem i iz nabiralnika N sporoc&#x30C;ilo m</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Sinhrono in asinhrono komuniciranje, brez kopic&#x30C;enja, z omejenim kopic&#x30C;enjem, z neomejenim kopic&#x30C;enjem. Prenas&#x30C;anje kopij sporoc&#x30C;ila ali reference (pomnilnis&#x30C;ke naslove).</p>
+</blockquote>
+<ol start="35">
+<li><em><strong>Komunikacija preko skupnega pomnilnika &#x2013; brez OS</strong></em></li>
+</ol>
+<blockquote>
+<p>Vec&#x30C;ja hitrost toda procesa morata sama poskrbeti za komunikacijo.<br>
+Proces lahko OS obvesti da drugemu procesu dovoljuje dostop do svojega pomnilnika.<br>
+Proces lahko zaprosi za pomnilnik dane velikosti, ki bo skupen. Vsak proces ki ga z&#x30C;eli uporabljati si ga mora dodati.</p>
+</blockquote>
+<ol start="36">
+<li><em><strong>Pojasni signale v UNIXu!</strong></em></li>
 </ol>
 <blockquote>
 <p>Signal je programska prekinitev s strani sistema, drugega programa ali samega sebe. Signal je moz&#x30C;no poslati, prestrec&#x30C;i, prezreti ali obravnavati. Nosijo malo informacije &#x2013; predvsem za javljanje nenavadnih okolis&#x30C;c&#x30C;in ali napak.<br>
+Imenuj razlog, zakaj so signali lahko nezanesljivi.<br>
 Signali so lahko nezanesljivi, ker se lahko v izjemnih okolis&#x30C;c&#x30C;inah obnas&#x30C;ajo drugac&#x30C;e, kot je predvideno.</p>
 </blockquote>
-<ol start="9">
-<li><em><strong>Rezidentni monitor</strong></em></li>
+<ol start="37">
+<li><em><strong>Nas&#x30C;tej razlike med vtic&#x30C;nicami in cevmi!</strong></em></li>
 </ol>
 <blockquote>
-<p>Uporablja se za avtomatizacijo delovanja poslov. Ob koncu vsakega posla klic&#x30C;e naslednjega. Ob zagonu se sam naloz&#x30C;i v pomnilnik ter ostane tam celi c&#x30C;as. Za delovanje potrebuje kontrolne kartice, zato tudi interpreter kartic, nalagalnik ter gonilnike za V/I naprave.</p>
+<p>Cevi so enosmerni kanali &#x2013; za komunikacijo sta potrebni dve, na vtic&#x30C;nice pa se priklopijo dvosmerni kanali. Cevi (razen FIFO, t.j. poimenovane cevi) lahko obstajajo le med dvema procesoma v sorodstvu (otrok-otrok, roditelj-otrok), za vtic&#x30C;nice pa ta relacija ni potrebna.</p>
 </blockquote>
-<ol start="10">
-<li><em><strong>Prekrivanje operacij</strong></em></li>
+<ol start="38">
+<li><em><strong>Socketi</strong></em></li>
 </ol>
 <blockquote>
-<p>Realizirano je bili z loc&#x30C;enim V/I ali pa preko spoolinga. Loc&#x30C;eni V/I se je pojavil, ko se je pojavil magnetni trak, saj je trak bil vmesni c&#x30C;len men V/I in CPU. Tako so lahko hkrati potekalo V/I in rac&#x30C;unske operacije. Problem je bil, ker je trak imel zaporedni dostop. Spooling se je pojavil z diskom, saj imajo ti neposredni dostop, zato se uporabljajo kot vmensi mediji za zac&#x30C;asno hranjenje V/I podatkov. Spooling uporablja branje vnaprej in tako omogoc&#x30C;i, da je na disko lahko hkrati pripravljenih vec&#x30C; poslov.</p>
+<p>Vtic&#x30C;nice so enostaven programski vmesnik za komunikacijo med procesi na istem ali razlic&#x30C;nih rac&#x30C;unalnikih. Pred pric&#x30C;etkom komunikacije morata oba procesa P in Q ustvariti vsaj svojo vtic&#x30C;nico. Nato pove vsak svoji vtic&#x30C;nici kaks&#x30C;en naslov bo imela (v mrez&#x30C;i je to IP). Sedaj se lahko pogovarjata &#x2013; strez&#x30C;nik (listen, accept), odjemalec (connect), za oba (send, recv, read, write, close).</p>
 </blockquote>
-<ol start="11">
-<li><em><strong>Multiprogramska paketna obdelava</strong></em></li>
+<ol start="39">
+<li><em><strong>Razloz&#x30C;i kritic&#x30C;ne odseke / sekcije / dele ! Katere kriterije bi morali upos&#x30C;tevati za splos&#x30C;no res&#x30C;itev problema kritic&#x30C;nega dela?</strong></em></li>
 </ol>
 <blockquote>
-<p>Smisel je, da ko se posel ustavi, OS izbere novega. S tem se pojavijo zahteve po razvrs&#x30C;c&#x30C;anju poslov, po upravljanju s pomnilnikom, po dodeljevanju procesorja (razvrs&#x30C;c&#x30C;anju na procesorju) ter zas&#x30C;c&#x30C;iti</p>
+<p>Kritic&#x30C;ni odsek je del programa oz. procesa, ki dostopa do skupnega sredstva. Bistveni pogoj za res&#x30C;itev tega problema je da je v kritic&#x30C;nem odseku v vsakem trenutku le en proces.<br>
+<strong>Kriteriji</strong>: medsebojno izkljuc&#x30C;evanje v vsakih okolis&#x30C;c&#x30C;inah, ne sme priti do zastoja, ne sme priti do nepredvideno dolgega odlaganja, izvajanje enega procesa znotraj kritic&#x30C;nega dela ne sme ovirati napredovanja drugih procesov izven kritic&#x30C;nega dela.</p>
+<ul>
+<li><strong>Vzajemno izkljuc&#x30C;evanje procesov</strong>: soc&#x30C;asno se lahko izvaja kvec&#x30C;jemu en kritic&#x30C;ni odsek (tudi c&#x30C;e pride do prekinitve) 2) Omejeno c&#x30C;akanje na vstop: procesu se ne sm e neom ejeno dolgo preprec&#x30C;evati vstopa v kr.odsek</li>
+<li><strong>Omejen vpliv na izbor</strong>: na to, kdo bo naslednji vstopil v kr. odsek, vplivajo le kandidati za vstop</li>
+<li><strong>Splos&#x30C;nost res&#x30C;itve</strong>: res&#x30C;itev naj bo neodvisna od s&#x30C;tevila procesov (n)</li>
+</ul>
 </blockquote>
-<ol start="12">
-<li><em><strong>Sistem z dodeljevanje c&#x30C;asa &#x2013; vec&#x30C;opravilni OS</strong></em></li>
+<ol start="40">
+<li><em><strong>Razloz&#x30C;i semafor!</strong></em></li>
 </ol>
 <blockquote>
-<p>Multiprogramski sistem paketne obdelave, ki uporablja s&#x30C;e timer. Pri njem se pojavijo zahteve po uporavljanju z zunanjim pomnilnikom, navideznim pomnilnikom, zahteve po datotec&#x30C;nem sistemu, po zas&#x30C;c&#x30C;iti, po dodeljevanju procesorja ter po sinhronizaciji in komunikaciji.</p>
+<p>Semafor je orodje za c&#x30C;asovno usklajevanje procesov. Je celos&#x30C;tevilska spremenljivka S, nad katero se izvajajo operacije inicializacija,</p>
 </blockquote>
-<ol start="13">
-<li><em><strong>Krmilnik</strong></em></li>
+<pre data-role="codeBlock" data-info class="language-"><code>wait(S) :
+
+while S &#x2264; 0 do { no_op; } //cakamo dokler je S enak 0
+S := S-1;
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>signal(S):
+
+S := S+1 //atomarno &#x2013; ne more biti prekinjen
+</code></pre><blockquote>
+<p>Po navadi sta ti dve operaciji realizirani na OS.</p>
+</blockquote>
+<ol start="41">
+<li><em><strong>Tipi datotek v Linuxu</strong></em></li>
 </ol>
 <blockquote>
-<p>Nadzoruje ustrezno napravo ali vec&#x30C; naprav.</p>
+<ul>
+<li>navadna datoteka &#x2013; /etc/passwd</li>
+<li>imenik &#x2013; /bin</li>
+<li>simbolic&#x30C;na povezava &#x2013; /usr/src/linux</li>
+<li>cev &#x2013; mkfifo pipa</li>
+<li>vtic&#x30C;nica</li>
+<li>znakovno orientirana naprava &#x2013; /dev/tty</li>
+<li>bloc&#x30C;no orientirana naprava &#x2013; /dev/sda</li>
+</ul>
 </blockquote>
-<ol start="14">
-<li><em><strong>Bootstrap</strong></em></li>
+<ol start="42">
+<li><em><strong>Bash ukazi za obdelavo datotek</strong></em></li>
 </ol>
 <blockquote>
-<p>Majhen, enostaven program, ki inicializira rac&#x30C;unalnis&#x30C;ki sistem (registre CPE, pomnilnike, krmilnike...), naloz&#x30C;i jedro OS v pomnilnik in mu nato preda nadzor.</p>
+<ul>
+<li>izpis vsebine: cat, less, head, tail</li>
+<li>urejanje vrstic: sort</li>
+<li>permutiranje vrstic: shuf</li>
+<li>odstranjevanje duplikatov: uniq</li>
+<li>s&#x30C;tevilc&#x30C;enje vrstic: nl</li>
+<li>obrat vrstic: rev</li>
+<li>spreminjanje znakov: tr</li>
+<li>obdelava stolpcev: cut in paste.</li>
+<li>s&#x30C;tetje besed: wc.</li>
+<li>primerjava vsebine: cmp.<br>
+Primer: cat /etc/passwd | cut -d: -f7 | sort | uniq -c | sort &#x2013;gr</li>
+</ul>
 </blockquote>
-<ol start="15">
+<ol start="43">
 <li><em><strong>Programska prekinitev</strong></em></li>
 </ol>
 <blockquote>
 <p>Pri prekinitvah. Ko se pojavi prekinitev, CPE prekine delo, zaz&#x30C;ene PSP ki ugotovi kdo je zahteval prekinitev, zaz&#x30C;ene ustrezni PSP in nato nadaljuje z delom.</p>
 </blockquote>
-<ol start="17">
-<li><em><strong>Vektorsko prekinjanje</strong></em></li>
-</ol>
-<blockquote>
-<p>Ko naprave zahteva prekinitev, v CPE pos&#x30C;lje tudi indeks i, s pomoc&#x30C;jo katerega nato CPE v prenitvenem vektorju (tabeli v pomnilniku) pois&#x30C;c&#x30C;e ustrezen PSP ter ga zaz&#x30C;ene. Ostalo je normalno.</p>
-</blockquote>
-<ol start="18">
-<li><em><strong>Vhodno izhodni sistem</strong></em></li>
-</ol>
-<blockquote>
-<p>Sestavljen je iz V/I naprav, krmilnikov ter programov za V/I operacije. Krmilnik skrbi za podrobnosti pri prenosu podatkov &#x2013; na njih se izvajajo V/I programi.</p>
-</blockquote>
-<ol start="19">
-<li><em><strong>Sinhroni V/I</strong></em></li>
-</ol>
-<blockquote>
-<p>Proces, ki je zahteval V/I operacijo, c&#x30C;aka da se ta konc&#x30C;a. Lahko izvede kako zanko, ukaz wait ali pa sam spremlja statusni register.</p>
-</blockquote>
-<ol start="20">
-<li><em><strong>Asinhroni V/I</strong></em></li>
-</ol>
-<blockquote>
-<p>Proces, ki je zahteval V/I operacijo, nadaljuje svoje izvajanje. C&#x30C;e ne more nadaljevati dela, ker c&#x30C;aka na podatke, sam sebe blokira. Je primeren za poc&#x30C;asne naprave.</p>
-</blockquote>
-<blockquote>
-<ol start="21">
-<li>DMA krnilnik<br>
-Se uporablja pri hitrih napravah za prenos med pomnilnikom in V/I napravami, brez posredovanja CPU.</li>
-</ol>
-</blockquote>
-<ol start="22">
-<li><em><strong>Sistemski klic</strong></em></li>
-</ol>
-<blockquote>
-<p>Z njegovo pomoc&#x30C;jo programer zaprosi OS, da ta v njegovem imenu izvede neko (zanj prepovedano) akcijo. Nekateri vis&#x30C;ji programski jeziki pa te klice (read, load, store, create, open, execute ...) vseeno omogoc&#x30C;ajo.</p>
-</blockquote>
-<ol start="23">
-<li><em><strong>Nit</strong></em></li>
-</ol>
-<blockquote>
-<p>Je tok izvajanja programa do danega trenutka. C&#x30C;e je sistem enoprocesorski, procesor posveti vsaki niti nekaj c&#x30C;asa, tako da vse napredujejo. C&#x30C;e pa je sistem vec&#x30C;procesorski, pa se lahko vsaka nit izvaja na svojem procesorju (to ni paralelno, ampak soc&#x30C;asno).</p>
-</blockquote>
-<ol start="24">
-<li><em><strong>Podobnosti in razlike med nitmi in procesi</strong></em></li>
-</ol>
-<blockquote>
-<p>Podobnosti: tudi nit je lahko v stanjih (nova, prekinjena, tec&#x30C;e, c&#x30C;aka ,konc&#x30C;ana), tudi nit lahk oustvari nove niti (hc&#x30C;ere) ter jih konc&#x30C;a in unic&#x30C;i, na enoprocesorskem sistemu tudi niti tekmujejo za procesor.<br>
-Razlike: komunikacija med istorodnimi nitmi je hitrejs&#x30C;a kot med procesi, istorodne niti niso zas&#x30C;c&#x30C;itene ena pred drugo tako kot procesi, ustvarjanje / konc&#x30C;anje niti je hitrejs&#x30C;e kot pri procesih.</p>
-</blockquote>
-<ol start="25">
-<li><em><strong>IPC</strong></em></li>
-</ol>
-<blockquote>
-<p>Je del OS, ki skrbi za komunikacijo in sinhronizacijo med procesi.</p>
-</blockquote>
-<ol start="26">
-<li><em><strong>Kako deluje razvr&#x161;&#x10D;evalni algoritem SJF (Shortest Job First)?</strong></em></li>
-</ol>
-<blockquote>
-<p>TO DO...</p>
-</blockquote>
-<ol start="27">
-<li><em><strong>Na&#x161;tejte naloge operacijskega sistema.</strong></em></li>
-</ol>
-<blockquote>
-<p>TO DO...</p>
-</blockquote>
-<ol start="28">
-<li><em><strong>Na&#x161;tejte tipe datotek v Linuxu?</strong></em></li>
-</ol>
-<blockquote>
-<p>TO DO...</p>
-</blockquote>
-<ol start="29">
-<li><em><strong>Poznamo dva modela za medprocesno komunikacijo. Opi&#x161;ite njune glavne zna&#x10D;ilnosti.</strong></em></li>
-</ol>
-<blockquote>
-<p>Socketi in cevi, opisano zgoraj.</p>
-</blockquote>
-<ol start="30">
+<ol start="44">
 <li><em><strong>Odgovori na vpra&#x161;anja</strong></em></li>
 </ol>
+<blockquote>
 <ul>
 <li>V kateri datoteki na Linux sistemih se skriva sol?</li>
 <li>Zapi&#x161;ite ukaz, ki ustvari anonimno cev.</li>
@@ -486,32 +717,26 @@ Razlike: komunikacija med istorodnimi nitmi je hitrejs&#x30C;a kot med procesi, 
 <li>Kam se shranjujejo podatki, ki jih zapi&#x161;emo v /dev/null</li>
 <li>Kateri proces je tipi&#x10D;no o&#x10D;e vseh demonov?</li>
 </ul>
-<ol start="31">
+</blockquote>
+<ol start="45">
 <li><em><strong>Na&#x161;tejte prednosti mikrojedernih operacijskih sistemov</strong></em></li>
 </ol>
 <blockquote>
 <p>TO DO...</p>
 </blockquote>
-<ol start="32">
+<ol start="46">
 <li><em><strong>Katere funkcije OS opravlja mikrojedro?</strong></em></li>
 </ol>
 <blockquote>
 <p>TO DO...</p>
 </blockquote>
-<ol start="33">
-<li><em><strong>Katere modele za medprocesno komunikacijo poznate? Opi&#x161;ite njihove prednosti in slabosti.</strong></em></li>
-</ol>
-<blockquote>
-<p>TO DO...<br>
-Zaenkrat: Socketi in cevi, opisano zgoraj.</p>
-</blockquote>
-<ol start="34">
+<ol start="47">
 <li><em><strong>Z diagramom opi&#x161;ite delovanje ukazov wait(S) in signal(S) za delo s semaforji. Ozna&#x10D;ite kateri deli se morajo izvajati atomarno.</strong></em></li>
 </ol>
 <blockquote>
 <p>TO DO...</p>
 </blockquote>
-<ol start="35">
+<ol start="47">
 <li><em>Razlo&#x17E;i pomen pozivnika</em> <em><strong>sokrat@jama:~&gt;</strong></em> . <em>Obrazlo&#x17E;i vse dele, tudi lo&#x10D;ila.</em></li>
 </ol>
 <blockquote>
