@@ -92,7 +92,13 @@ CPE prekine tekoče delo, izvede prekinitveno servisni program (v nadaljevanju 
 
 19. ***Elementi strojne zaščite***
 
-> Sistemski način delovanja in uporabniški način delovanja
+> - **Dvojni način delovanja in priviligirani ukazi**
+**Ideja**: nekateri ukazi so potencialno škodljivi, zato bodo privilegirani – smel jih bo uporabljati samo OS
+**Posledica**: računalniški sistem bo vedno delal v enem od dveh možnih načinov:
+>      - SISTEMSKI (S) – teče le OS in nekateri temu pridruženi programi, ki smejo izvajati privilegirane ukaze
+>      - UPORABNIŠKI (U) – tečejo uporabniški programi, ki ne smejo izvajati privilegiranih ukazov.
+
+> Strojno opremo nudi bit način N, ki pove kateri je trenutni način delovanja. Poskrbeti moramo, da bo sistem prehajal med načini. Če bo proces poskušal izvesti privilegirani ukaz in je hkrati N=U, potem se proces ujame v PAST (→HW)
 > - **V/I naprave**: V/I ukaze sme izvajati le OS, saj le ta pozna stanje V/I naprav (npr. preko tabele stanj naprav) V/I ukazi morajo zato biti priviligirani.
 > - **Gl. pomnilnik**: Nastavimo spodnjo in zgornjo mejo trenutno dovoljenih naslovov. Pred dostopom do pom nilnika se vsak naslov strojno preveri. Če je izven dovoljenega obsega, se program ujame v past (in nadzor prevzame OS).
 > - **CPE**: CPE je treba zaščititi pred tem , da bi si jo upor.program prilastil –uvedemo timer.
@@ -214,6 +220,8 @@ Torej je lahko res prekinjen. To je razvrščanje s prekinjanjem (preemptive s
 > Je del OS, ki skrbi za komunikacijo in sinhronizacijo med procesi.
 > - **Neposredna komunikacija**: procesi se pri komuniciranju ekslicitno imenujejo (navedejo).
 >     - *Simetrična*: pošiljatelj in prejemnik drug drugega eksplicitno imenujeta
+P: send(Q,m) .... pošlji Q-ju sporočilo m
+Q: receive(P,x) .... sprejmi sporočilo od P
 >     - *Asimetrična*: samo pošiljatelj eksplicitno navede prejemnika
 send(Q,m) ...pošlji procesu Q sporočilo m
 receive (x,m) ...prejmi od kogarkoli sporočilo m in potem vrni njegovo ime v spremenljivko v x

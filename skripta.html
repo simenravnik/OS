@@ -266,7 +266,7 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <pre data-role="codeBlock" data-info class="language-"><code>Avtor: &#x160;imen Ravnik
 Datum: June, 2019
-</code></pre><h2 class="mume-header" id="odgovori-na-vprasanja">Odgovori na vprasanja</h2>
+</code></pre><h2 class="mume-header" id="odgovori-na-vpra%C5%A1anja">Odgovori na vpra&#x161;anja</h2>
 
 <ol>
 <li><em><strong>Kaj je OS?</strong></em></li>
@@ -290,7 +290,7 @@ Datum: June, 2019
 </ul>
 </blockquote>
 <ol start="3">
-<li><em><strong>Lastnosti/naloge OS</strong></em></li>
+<li><em><strong>Lastnosti/Naloge OS</strong></em></li>
 </ol>
 <blockquote>
 <ul>
@@ -404,7 +404,19 @@ CPE prekine tekoc&#x30C;e delo, izvede prekinitveno servisni program (v nadaljev
 <li><em><strong>Elementi strojne zas&#x30C;c&#x30C;ite</strong></em></li>
 </ol>
 <blockquote>
-<p>Sistemski nac&#x30C;in delovanja in uporabnis&#x30C;ki nac&#x30C;in delovanja</p>
+<ul>
+<li><strong>Dvojni na&#x10D;in delovanja in priviligirani ukazi</strong><br>
+<strong>Ideja</strong>: nekateri ukazi so potencialno s&#x30C;kodljivi, zato bodo privilegirani &#x2013; smel jih bo uporabljati samo OS<br>
+<strong>Posledica</strong>: rac&#x30C;unalnis&#x30C;ki sistem bo vedno delal v enem od dveh moz&#x30C;nih nac&#x30C;inov:
+<ul>
+<li>SISTEMSKI (S) &#x2013; tec&#x30C;e le OS in nekateri temu pridruz&#x30C;eni programi, ki smejo izvajati privilegirane ukaze</li>
+<li>UPORABNIS&#x30C;KI (U) &#x2013; tec&#x30C;ejo uporabnis&#x30C;ki programi, ki ne smejo izvajati privilegiranih ukazov.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Strojno opremo nudi bit nac&#x30C;in N, ki pove kateri je trenutni nac&#x30C;in delovanja. Poskrbeti moramo, da bo sistem prehajal med nac&#x30C;ini. C&#x30C;e bo proces poskus&#x30C;al izvesti privilegirani ukaz in je hkrati N=U, potem se proces ujame v PAST (&#x2192;HW)</p>
 <ul>
 <li><strong>V/I naprave</strong>: V/I ukaze sme izvajati le OS, saj le ta pozna stanje V/I naprav (npr. preko tabele stanj naprav) V/I ukazi morajo zato biti priviligirani.</li>
 <li><strong>Gl. pomnilnik</strong>: Nastavimo spodnjo in zgornjo mejo trenutno dovoljenih naslovov. Pred dostopom do pom nilnika se vsak naslov strojno preveri. C&#x30C;e je izven dovoljenega obsega, se program ujame v past (in nadzor prevzame OS).</li>
@@ -412,14 +424,14 @@ CPE prekine tekoc&#x30C;e delo, izvede prekinitveno servisni program (v nadaljev
 </ul>
 </blockquote>
 <ol start="20">
-<li><em><strong>Komponente OS</strong></em></li>
+<li><em><strong>Komponente/Naloge OS</strong></em></li>
 </ol>
 <blockquote>
 <ul>
 <li><strong>Upravljanje procesov</strong> - Ustvarjanje, unic&#x30C;enje, odloz&#x30C;itev procesa, njegovo ponovno obuditev, usklajevanje med procesi, komunikacija med procesi , res&#x30C;evanje iz zastojev (mrtvih zank) , in s&#x30C;e kaj.</li>
 <li><strong>Upravljanje glavnega pomnilnika</strong> - Nadzor &#x2013; dodeljevanje in odvzemanje</li>
 <li><strong>Upravljanje datotek</strong> - Ustvarjanje in brisanje, premes&#x30C;c&#x30C;anje, kopiranje, stik, sprehajanje po dir., preslikavanje m ed datoteko in resnic&#x30C;nim zunanjim pomnilnikom, skladis&#x30C;c&#x30C;enje (backup), t.j. varnostno shranjevanje.</li>
-<li><strong>Upravljanje V/I sistema</strong> - Vsplos&#x30C;en vmesnik za kom unikacijo z golilniki, vsebovati gonilnike za posamezne V/I naprave, upravljati z vmesnimi pomnilniki (buffer), predpomnilniki (cache), spoolingom in s&#x30C;e kaj.</li>
+<li><strong>Upravljanje V/I sistema</strong> - splos&#x30C;en vmesnik za komunikacijo z golilniki, vsebovati gonilnike za posamezne V/I naprave, upravljati z vmesnimi pomnilniki (buffer), predpomnilniki (cache), spoolingom in s&#x30C;e kaj.</li>
 <li><strong>Zas&#x30C;c&#x30C;ita in varnost</strong> - Nadzorovanje dostopa procesov do posameznih virov in zas&#x30C;c&#x30C;ita pred okolico.</li>
 <li><strong>Delo v omrez&#x30C;ju</strong></li>
 <li><strong>Interpretacija uporabnikovih ukazov</strong></li>
@@ -430,7 +442,7 @@ CPE prekine tekoc&#x30C;e delo, izvede prekinitveno servisni program (v nadaljev
 </ol>
 <blockquote>
 <p>Z njegovo pomoc&#x30C;jo programer zaprosi OS, da ta v njegovem imenu izvede neko (zanj prepovedano) priviligirano akcijo. Nekateri vis&#x30C;ji programski jeziki pa te klice (read, load, store, create, open, execute ...) vseeno omogoc&#x30C;ajo.<br>
-V grobem jih razbrstimo v skupine : upravljanje procesov, upravljanje datotek, upravljanje naprav, vzdrz&#x30C;evanje in dostavo informacij, komunikacijo</p>
+V grobem jih razvrstimo v skupine: upravljanje procesov, upravljanje datotek, upravljanje naprav, vzdrz&#x30C;evanje in dostavo informacij, komunikacijo</p>
 </blockquote>
 <ol start="22">
 <li><em><strong>Zgradbe jedra?</strong></em></li>
@@ -448,7 +460,7 @@ sistem pa enostavno razs&#x30C;irljiv, zanesljiv, varen. Npr. c&#x30C;e eden od 
 <li><em><strong>Kaj je proces?</strong></em></li>
 </ol>
 <blockquote>
-<p>Proces je program v izvajanju. Je ustvarjen, tec&#x30C;e in nato unic&#x30C;en. Za svoje delovanje potrebuje vire (CPE, pomnilnik, V/I, datoteke, c&#x30C;as, ...). Nekatere vire dobi ob nastanku, druge kasneje. Z okolico si lahko izmenjuje podatke. Hkrati lahko obstaja vec&#x30C; procesov. Lahko so neodvisni, lahko pa se usklajujejo, komunicirajo. Obic&#x30C;ajno tekmujejo za omejene vire. Proces sam lahko ustvari nove procese. Program je pasivna entiteta - vsebina neke datoteke. Proces poleg program a zajem a tudi trenutno stanje nekaterih drugih entitet, ki se spreminjajo med izvajanjem programa.</p>
+<p>Proces je program v izvajanju. Je ustvarjen, tec&#x30C;e in nato unic&#x30C;en. Za svoje delovanje potrebuje vire (CPE, pomnilnik, V/I, datoteke, c&#x30C;as, ...). Nekatere vire dobi ob nastanku, druge kasneje. Z okolico si lahko izmenjuje podatke. Hkrati lahko obstaja vec&#x30C; procesov. Lahko so neodvisni, lahko pa se usklajujejo, komunicirajo. Obic&#x30C;ajno tekmujejo za omejene vire. Proces sam lahko ustvari nove procese. Program je pasivna entiteta - vsebina neke datoteke. Proces poleg program a zajema tudi trenutno stanje nekaterih drugih entitet, ki se spreminjajo med izvajanjem programa.</p>
 </blockquote>
 <ol start="24">
 <li><em><strong>Nas&#x30C;tej stanja procesa v CPU!</strong></em></li>
@@ -460,7 +472,7 @@ sistem pa enostavno razs&#x30C;irljiv, zanesljiv, varen. Npr. c&#x30C;e eden od 
 <li><em><strong>Kaj je PCB?</strong></em></li>
 </ol>
 <blockquote>
-<p>PCB je nadzorni blok procesa v OS-u. Vsebuje podatke o procesu, med njimi tudi kazalce za povezovanje z drugimi PCB v razne vrste. (stanje, prioriteta, podatki za obnovo, sklad, spremenljivke, podatki o pomnilniku, V/I in datoteke, ostalo).</p>
+<p>PCB (process control block) je nadzorni blok procesa v OS-u. Vsebuje podatke o procesu, med njimi tudi kazalce za povezovanje z drugimi PCB v razne vrste. (stanje, prioriteta, podatki za obnovo, sklad, spremenljivke, podatki o pomnilniku, V/I in datoteke, ostalo).</p>
 </blockquote>
 <ol start="26">
 <li><em><strong>V katerih vrstah se nahajajo procesi?</strong></em></li>
@@ -485,10 +497,14 @@ sistem pa enostavno razs&#x30C;irljiv, zanesljiv, varen. Npr. c&#x30C;e eden od 
 </blockquote>
 <blockquote>
 <p>Razvrs&#x30C;c&#x30C;anje opravlja razvrs&#x30C;c&#x30C;evalnik, ki je del OS.<br>
-Na enoprocesorskem sistemu v nekem trenutku tec&#x30C;e kvec&#x30C;jemu en proces. Ostali procesi bodisi c&#x30C;akajo (na nek dogodek) ali pa so pripravljeni (c&#x30C;akajo na CPE). Med pripravljenimi se slednjic&#x30C; enega izbere in sedaj se njemu dodeli CPE, temu se rec&#x30C;e preklop. Pravimo, da je procesor zamenjal okolje svojega delovanja. Tak preklop imenujemo tudi menjava okolja (context switch). Pri menjavi okolja (preklopu) sta v resnici udelez&#x30C;ena dva programa OS:<br>
-razvrs&#x30C;c&#x30C;evalnik (scheduler), ki izbere enega od pripravljenih procesov,<br>
-dodeljevalnik (dispatcher), ki izbranemu procesu v resnici dodeli procesor, tj. izvede menjavo okolja.<br>
-V katerih okolis&#x30C;c&#x30C;inah je moz&#x30C;no/nujno pognati razvrs&#x30C;c&#x30C;evalnik? Potem, ko je:</p>
+Na enoprocesorskem sistemu v nekem trenutku tec&#x30C;e kvec&#x30C;jemu en proces. Ostali procesi bodisi c&#x30C;akajo (na nek dogodek) ali pa so pripravljeni (c&#x30C;akajo na CPE). Med pripravljenimi se slednjic&#x30C; enega izbere in sedaj se njemu dodeli CPE, temu se rec&#x30C;e preklop. Pravimo, da je procesor zamenjal okolje svojega delovanja. Tak preklop imenujemo tudi menjava okolja (context switch). Pri menjavi okolja (preklopu) sta v resnici udelez&#x30C;ena dva programa OS:</p>
+<ul>
+<li><strong>razvrs&#x30C;c&#x30C;evalnik (scheduler)</strong>, ki izbere enega od pripravljenih procesov,</li>
+<li><strong>dodeljevalnik (dispatcher)</strong>, ki izbranemu procesu v resnici dodeli procesor, tj. izvede menjavo okolja.</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>V katerih okolis&#x30C;c&#x30C;inah je moz&#x30C;no/nujno pognati razvrs&#x30C;c&#x30C;evalnik? Potem, ko je:</p>
 <ul>
 <li><strong>tekoc&#x30C;i proces postal onemogoc&#x30C;en</strong><br>
 Proces ne more nadaljevati, zato bo s&#x30C;el med c&#x30C;akajoc&#x30C;e in sprostil CPE. Kdo dobi naslednji<br>
@@ -521,15 +537,11 @@ Torej je lahko res prekinjen. To je razvrs&#x30C;c&#x30C;anje s prekinjanjem (pr
 <blockquote>
 <ul>
 <li><strong>Prvi pride, prvi melje (FIFO)</strong> &#x2013; proces, ki je prej zahteval procesor ga prvi dobi</li>
-<li><strong>Kroz&#x30C;no razvrs&#x30C;c&#x30C;anje (round robin)</strong> &#x2013; vrsta pripravljenih procesov je kroz&#x30C;ni seznam in proces, ki pride na vrsto dobi<br>
-nek c&#x30C;asovno rezino. Ko ta potec&#x30C;e ali pa se proces ustavi, se proces postavi na konec vrste</li>
+<li><strong>Kroz&#x30C;no razvrs&#x30C;c&#x30C;anje (round robin)</strong> &#x2013; vrsta pripravljenih procesov je kroz&#x30C;ni seznam in proces, ki pride na vrsto dobi neko c&#x30C;asovno rezino. Ko ta potec&#x30C;e ali pa se proces ustavi, se proces postavi na konec vrste</li>
 <li><strong>Razvrs&#x30C;c&#x30C;anje po prioriteti</strong> &#x2013; vsak proces ima prioriteto, najvis&#x30C;ji dobi CPE</li>
-<li><strong>Najkrajs&#x30C;i nemoteni c&#x30C;as (SJF - Shortest Job First)</strong> &#x2013; CPE se dodeli procesu, ki bo najmanj c&#x30C;asa nemoteno tekel.<br>
-Napovedujemo tako, da predpostavimo, da bo naslednji nemoteni tek trajal podobno c&#x30C;asa, kot trenutni</li>
-<li><strong>Najkrajs&#x30C;i nemoteni tek + prekinjanje (SRTF - Shortest Remaining Time First)</strong> - enak SJF, le da se lahko tekoc&#x30C;i proces<br>
-prekine, c&#x30C;e drug pripravljen proces obljublja krajs&#x30C;i nemoten tek od preostanka tekoc&#x30C;ega nemotenega teka</li>
-<li><strong>Z zagotovilom</strong> - s pomoc&#x30C;jo formule izrac&#x30C;una kvocient k in proces, ki ima najmanjs&#x30C;i k dobi CPE. C&#x30C;e vpeljemo s&#x30C;e<br>
-prekinjanje, se k tekom c&#x30C;asa povec&#x30C;uje, in ko presega vrednost naslednjega najmanjs&#x30C;eg k-ja, se prekine</li>
+<li><strong>Najkrajs&#x30C;i nemoteni c&#x30C;as (SJF - Shortest Job First)</strong> &#x2013; CPE se dodeli procesu, ki bo najmanj c&#x30C;asa nemoteno tekel. Napovedujemo tako, da predpostavimo, da bo naslednji nemoteni tek trajal podobno c&#x30C;asa, kot trenutni</li>
+<li><strong>Najkrajs&#x30C;i nemoteni tek + prekinjanje (SRTF - Shortest Remaining Time First)</strong> - enak SJF, le da se lahko tekoc&#x30C;i proces prekine, c&#x30C;e drug pripravljen proces obljublja krajs&#x30C;i nemoten tek od preostanka tekoc&#x30C;ega nemotenega teka</li>
+<li><strong>Z zagotovilom</strong> - s pomoc&#x30C;jo formule izrac&#x30C;una kvocient k in proces, ki ima najmanjs&#x30C;i k dobi CPE. C&#x30C;e vpeljemo s&#x30C;e prekinjanje, se k tekom c&#x30C;asa povec&#x30C;uje, in ko presega vrednost naslednjega najmanjs&#x30C;eg k-ja, se prekine</li>
 <li><strong>Loterija</strong> &#x2013; Razvrs&#x30C;c&#x30C;evalnik nakljuc&#x30C;no izbere dovolilnico.</li>
 </ul>
 </blockquote>
@@ -565,7 +577,7 @@ prekinjanje, se k tekom c&#x30C;asa povec&#x30C;uje, in ko presega vrednost nasl
 <li><em><strong>Nit</strong></em></li>
 </ol>
 <blockquote>
-<p>Je tok izvajanja programa do danega trenutka. C&#x30C;e je sistem enoprocesorski, procesor posveti vsaki niti nekaj c&#x30C;asa, tako da vse napredujejo. C&#x30C;e pa je sistem vec&#x30C;procesorski, pa se lahko vsaka nit izvaja na svojem procesorju (to ni paralelno, ampak soc&#x30C;asno). En proces ima lahko vec&#x30C; niti. Niti uporabljamo z&#x30C;elimo soc&#x30C;asno izvajati vec&#x30C; funkcij istega programa ali pa soc&#x30C;asno izvajati vec&#x30C; klicev iste funkcije.</p>
+<p>Je tok izvajanja programa do danega trenutka. C&#x30C;e je sistem enoprocesorski, procesor posveti vsaki niti nekaj c&#x30C;asa, tako da vse napredujejo. C&#x30C;e pa je sistem vec&#x30C;procesorski, pa se lahko vsaka nit izvaja na svojem procesorju (to ni paralelno, ampak soc&#x30C;asno). En proces ima lahko vec&#x30C; niti. Niti uporabljamo ker z&#x30C;elimo soc&#x30C;asno izvajati vec&#x30C; funkcij istega programa ali pa soc&#x30C;asno izvajati vec&#x30C; klicev iste funkcije.</p>
 </blockquote>
 <ol start="32">
 <li><em><strong>Podobnosti in razlike med nitmi in procesi</strong></em></li>
@@ -577,7 +589,7 @@ prekinjanje, se k tekom c&#x30C;asa povec&#x30C;uje, in ko presega vrednost nasl
 </ul>
 </blockquote>
 <ol start="33">
-<li><em><strong>Vrste komunikacije</strong></em></li>
+<li><em><strong>Vrste komunikacije med procesi</strong></em></li>
 </ol>
 <blockquote>
 <ul>
@@ -586,14 +598,16 @@ prekinjanje, se k tekom c&#x30C;asa povec&#x30C;uje, in ko presega vrednost nasl
 </ul>
 </blockquote>
 <ol start="34">
-<li><em><strong>IPC</strong></em></li>
+<li><em><strong>IPC (Interprocess communication)</strong></em></li>
 </ol>
 <blockquote>
 <p>Je del OS, ki skrbi za komunikacijo in sinhronizacijo med procesi.</p>
 <ul>
 <li><strong>Neposredna komunikacija</strong>: procesi se pri komuniciranju ekslicitno imenujejo (navedejo).
 <ul>
-<li><em>Simetric&#x30C;na</em>: pos&#x30C;iljatelj in prejemnik drug drugega eksplicitno imenujeta</li>
+<li><em>Simetric&#x30C;na</em>: pos&#x30C;iljatelj in prejemnik drug drugega eksplicitno imenujeta<br>
+P: send(Q,m) .... pos&#x30C;lji Q-ju sporoc&#x30C;ilo m<br>
+Q: receive(P,x) .... sprejmi sporoc&#x30C;ilo od P</li>
 <li><em>Asimetric&#x30C;na</em>: samo pos&#x30C;iljatelj eksplicitno navede prejemnika<br>
 send(Q,m) ...pos&#x30C;lji procesu Q sporoc&#x30C;ilo m<br>
 receive (x,m) ...prejmi od kogarkoli sporoc&#x30C;ilo m in potem vrni njegovo ime v spremenljivko v x</li>
@@ -647,7 +661,8 @@ Signali so lahko nezanesljivi, ker se lahko v izjemnih okolis&#x30C;c&#x30C;inah
 <p>Kritic&#x30C;ni odsek je del programa oz. procesa, ki dostopa do skupnega sredstva. Bistveni pogoj za res&#x30C;itev tega problema je da je v kritic&#x30C;nem odseku v vsakem trenutku le en proces.<br>
 <strong>Kriteriji</strong>: medsebojno izkljuc&#x30C;evanje v vsakih okolis&#x30C;c&#x30C;inah, ne sme priti do zastoja, ne sme priti do nepredvideno dolgega odlaganja, izvajanje enega procesa znotraj kritic&#x30C;nega dela ne sme ovirati napredovanja drugih procesov izven kritic&#x30C;nega dela.</p>
 <ul>
-<li><strong>Vzajemno izkljuc&#x30C;evanje procesov</strong>: soc&#x30C;asno se lahko izvaja kvec&#x30C;jemu en kritic&#x30C;ni odsek (tudi c&#x30C;e pride do prekinitve) 2) Omejeno c&#x30C;akanje na vstop: procesu se ne sm e neom ejeno dolgo preprec&#x30C;evati vstopa v kr.odsek</li>
+<li><strong>Vzajemno izkljuc&#x30C;evanje procesov</strong>: soc&#x30C;asno se lahko izvaja kvec&#x30C;jemu en kritic&#x30C;ni odsek (tudi c&#x30C;e pride do prekinitve)</li>
+<li><strong>Omejeno c&#x30C;akanje na vstop</strong>: procesu se ne sme neomejeno dolgo preprec&#x30C;evati vstopa v kr.odsek</li>
 <li><strong>Omejen vpliv na izbor</strong>: na to, kdo bo naslednji vstopil v kr. odsek, vplivajo le kandidati za vstop</li>
 <li><strong>Splos&#x30C;nost res&#x30C;itve</strong>: res&#x30C;itev naj bo neodvisna od s&#x30C;tevila procesov (n)</li>
 </ul>
@@ -701,12 +716,6 @@ Primer: cat /etc/passwd | cut -d: -f7 | sort | uniq -c | sort &#x2013;gr</li>
 </ul>
 </blockquote>
 <ol start="43">
-<li><em><strong>Programska prekinitev</strong></em></li>
-</ol>
-<blockquote>
-<p>Pri prekinitvah. Ko se pojavi prekinitev, CPE prekine delo, zaz&#x30C;ene PSP ki ugotovi kdo je zahteval prekinitev, zaz&#x30C;ene ustrezni PSP in nato nadaljuje z delom.</p>
-</blockquote>
-<ol start="44">
 <li><em><strong>Odgovori na vpra&#x161;anja</strong></em></li>
 </ol>
 <blockquote>
@@ -718,19 +727,19 @@ Primer: cat /etc/passwd | cut -d: -f7 | sort | uniq -c | sort &#x2013;gr</li>
 <li>Kateri proces je tipi&#x10D;no o&#x10D;e vseh demonov?</li>
 </ul>
 </blockquote>
-<ol start="45">
+<ol start="44">
 <li><em><strong>Na&#x161;tejte prednosti mikrojedernih operacijskih sistemov</strong></em></li>
 </ol>
 <blockquote>
 <p>TO DO...</p>
 </blockquote>
-<ol start="46">
+<ol start="45">
 <li><em><strong>Katere funkcije OS opravlja mikrojedro?</strong></em></li>
 </ol>
 <blockquote>
 <p>TO DO...</p>
 </blockquote>
-<ol start="47">
+<ol start="46">
 <li><em><strong>Z diagramom opi&#x161;ite delovanje ukazov wait(S) in signal(S) za delo s semaforji. Ozna&#x10D;ite kateri deli se morajo izvajati atomarno.</strong></em></li>
 </ol>
 <blockquote>
