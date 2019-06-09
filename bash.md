@@ -79,8 +79,12 @@ fi
 for datoteka in `ls *$1 2>/dev/null`
 do
   mv $datoteka `basename $datoteka $1`$2
-done  
+done
+```
+
 7.Napišite program v lupini, ki vsake pet minut preveri, če se na sistemu pojavi nek proces in ga poskusa ubiti. Ime procesa podamo v ukazni vrstici
+
+```bash
 while true; do     ps -eo "%t %c %p" | grep $1 > dd     while read p; do         if [ `echo $p | grep -o ":" | wc -l` -eq 1 ]; then             if [ `echo $p | cut -d":" -f1` -lt 5 ]; then                 kill `echo $p | awk '!/(Avail|shm|udev)/{print $3}'`             fi         fi     done < dd     sleep 300     rm dd done
 ```
 
