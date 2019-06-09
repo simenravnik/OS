@@ -322,6 +322,20 @@ Primer: cat /etc/passwd | cut -d: -f7 | sort | uniq -c | sort –gr
 
 > TO DO...
 
-47. *Razloži pomen pozivnika* ***sokrat@jama:~>*** . *Obrazloži vse dele, tudi ločila.*
+47. *Razloži pomen pozivnika* ***sammy@webapp:~$*** . *Obrazloži vse dele, tudi ločila.*
 
-> TO DO...
+> - `sammy`: The username of the current user
+> - `webapp`: The hostname of the server
+> - `~`: The current directory
+> - `$`: The prompt symbol
+
+48. ***Mikrojedro / Mikroprocesor***
+
+> Prednosti:
+> - **Funkcije**: aritmetično logične operacije.
+> - **Hitrost**: 3 miljarde operacij na sekundo. Ker je vse skupaj integrirano na enem čipu so prenosi podatkov zelo hitri.
+> - **Prenos podatkov**: hiter prenos podatkov.
+> - **Zahtevne operacije**: So uporabljeni za izračun zahtevnih matematičnih operacij (npr. floating point).
+
+> Slabosti:
+> - **Pregrevanje**: Ker je vse skupaj integrirano na enem čipu se ta zelo segreva.
