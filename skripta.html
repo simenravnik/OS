@@ -757,7 +757,7 @@ Primer: cat /etc/passwd | cut -d: -f7 | sort | uniq -c | sort &#x2013;gr</li>
 </ul>
 </blockquote>
 <ol start="48">
-<li><em><strong>Mikrojedro / Mikroprocesor</strong></em></li>
+<li><em><strong>Mikroprocesor</strong></em></li>
 </ol>
 <blockquote>
 <p>Prednosti:</p>
@@ -773,6 +773,18 @@ Primer: cat /etc/passwd | cut -d: -f7 | sort | uniq -c | sort &#x2013;gr</li>
 <ul>
 <li><strong>Pregrevanje</strong>: Ker je vse skupaj integrirano na enem &#x10D;ipu se ta zelo segreva.</li>
 </ul>
+</blockquote>
+<ol start="49">
+<li><em><strong>Mikrojedro</strong></em></li>
+</ol>
+<blockquote>
+<p>Mikrojedro vsebuje le funkcije upravljanja s pomnilnikom, &#x10D;asovnega razvr&#x161;&#x10D;anja procesov ter komunikacije med procesi, ki so nujne za njegovo delovanje. Druge funkcije in programi (npr. razni servisi, gonilniki naprav, datote&#x10D;ni sistemi, ...) pa so vsebovane v uporabni&#x161;kem prostoru in lahko komunicirajo z jedrom preko skupnega kanala, ne morejo pa neposredno dostopati do njega. Tak&#x161;no na&#x10D;elo se uporablja predvsem v namenskih operacijskih sistemih, kjer se zahteva enostavna zasnova in velika zanesljivost delovanja. Taka zasnova jedra ravno zaradi posrednega dostopa nekaterih komponent do jedra povzro&#x10D;i nekoliko slab&#x161;o odzivnost sistema. Zgled tak&#x161;nega jedra je Mach.</p>
+</blockquote>
+<ol start="50">
+<li><em><strong>Monoliti&#x10D;no jedro</strong></em></li>
+</ol>
+<blockquote>
+<p>Monoliti&#x10D;no jedro je tisto jedro, ki se v pomnilnik nalo&#x17E;i kot en velik dvoji&#x161;ki zapis ra&#x10D;unalni&#x161;kih ukazov. Vsebuje vse funkcije, ki jih mora opravljati jedro, vanj pa so vklju&#x10D;ene tudi razli&#x10D;ne druge funkcije (npr. omre&#x17E;ni protokoli) in gonilniki naprav. Zato izvorna koda monoliti&#x10D;nih jeder vsebuje veliko vrstic kode, kar ote&#x17E;i preglednost in odkrivanje napak. Predvsem slabo napisani in nepreverjeni gonilniki so lahko vir te&#x17E;av, ker en tak gonilnik lahko ote&#x17E;i delovanje sistema ali celo povzro&#x10D;i njegovo sesutje. Zgled operacijskega sistema z monoliti&#x10D;nim jedrom je Linux.</p>
 </blockquote>
 
       </div>

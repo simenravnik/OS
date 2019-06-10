@@ -329,7 +329,7 @@ Primer: cat /etc/passwd | cut -d: -f7 | sort | uniq -c | sort –gr
 > - `~`: The current directory
 > - `$`: The prompt symbol
 
-48. ***Mikrojedro / Mikroprocesor***
+48. ***Mikroprocesor***
 
 > Prednosti:
 > - **Funkcije**: aritmetično logične operacije.
@@ -339,3 +339,11 @@ Primer: cat /etc/passwd | cut -d: -f7 | sort | uniq -c | sort –gr
 
 > Slabosti:
 > - **Pregrevanje**: Ker je vse skupaj integrirano na enem čipu se ta zelo segreva.
+
+49. ***Mikrojedro***
+
+> Mikrojedro vsebuje le funkcije upravljanja s pomnilnikom, časovnega razvrščanja procesov ter komunikacije med procesi, ki so nujne za njegovo delovanje. Druge funkcije in programi (npr. razni servisi, gonilniki naprav, datotečni sistemi, ...) pa so vsebovane v uporabniškem prostoru in lahko komunicirajo z jedrom preko skupnega kanala, ne morejo pa neposredno dostopati do njega. Takšno načelo se uporablja predvsem v namenskih operacijskih sistemih, kjer se zahteva enostavna zasnova in velika zanesljivost delovanja. Taka zasnova jedra ravno zaradi posrednega dostopa nekaterih komponent do jedra povzroči nekoliko slabšo odzivnost sistema. Zgled takšnega jedra je Mach.
+
+50. ***Monolitično jedro***
+
+> Monolitično jedro je tisto jedro, ki se v pomnilnik naloži kot en velik dvojiški zapis računalniških ukazov. Vsebuje vse funkcije, ki jih mora opravljati jedro, vanj pa so vključene tudi različne druge funkcije (npr. omrežni protokoli) in gonilniki naprav. Zato izvorna koda monolitičnih jeder vsebuje veliko vrstic kode, kar oteži preglednost in odkrivanje napak. Predvsem slabo napisani in nepreverjeni gonilniki so lahko vir težav, ker en tak gonilnik lahko oteži delovanje sistema ali celo povzroči njegovo sesutje. Zgled operacijskega sistema z monolitičnim jedrom je Linux.
